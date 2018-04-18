@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service5" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/SLSOCserver" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService5_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService5_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService5_GetComTimetables_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComTimetables" />
+  </wsdl:message>
+  <wsdl:message name="IService5_GetComTimetables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComTimetablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService5_GetBusTimetables_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusTimetables" />
+  </wsdl:message>
+  <wsdl:message name="IService5_GetBusTimetables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusTimetablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService5_GetEngTimetables_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEngTimetables" />
+  </wsdl:message>
+  <wsdl:message name="IService5_GetEngTimetables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEngTimetablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService5_AddFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IService5_AddFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService5">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/Login" message="tns:IService5_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/LoginResponse" message="tns:IService5_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComTimetables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/GetComTimetables" message="tns:IService5_GetComTimetables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/GetComTimetablesResponse" message="tns:IService5_GetComTimetables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusTimetables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/GetBusTimetables" message="tns:IService5_GetBusTimetables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/GetBusTimetablesResponse" message="tns:IService5_GetBusTimetables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEngTimetables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/GetEngTimetables" message="tns:IService5_GetEngTimetables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/GetEngTimetablesResponse" message="tns:IService5_GetEngTimetables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFeedback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService5/AddFeedback" message="tns:IService5_AddFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService5/AddFeedbackResponse" message="tns:IService5_AddFeedback_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService5" type="tns:IService5">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService5/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComTimetables">
+      <soap:operation soapAction="http://tempuri.org/IService5/GetComTimetables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusTimetables">
+      <soap:operation soapAction="http://tempuri.org/IService5/GetBusTimetables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEngTimetables">
+      <soap:operation soapAction="http://tempuri.org/IService5/GetEngTimetables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFeedback">
+      <soap:operation soapAction="http://tempuri.org/IService5/AddFeedback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service5">
+    <wsdl:port name="BasicHttpBinding_IService5" binding="tns:BasicHttpBinding_IService5">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/SLSOCserver/Service5/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SLSOCserver" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SLSOCserver" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="Users">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Users" nillable="true" type="tns:Users" />
+  <xs:complexType name="Lecturersc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adtwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Faculty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduleone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modulethree" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moduletwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Lecturersc" nillable="true" type="tns:Lecturersc" />
+  <xs:complexType name="ArrayOfLecturersc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Lecturersc" nillable="true" type="tns:Lecturersc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLecturersc" nillable="true" type="tns:ArrayOfLecturersc" />
+  <xs:complexType name="Studentsc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adtwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Byear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Faculty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Studentsc" nillable="true" type="tns:Studentsc" />
+  <xs:complexType name="ArrayOfStudentsc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Studentsc" nillable="true" type="tns:Studentsc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudentsc" nillable="true" type="tns:ArrayOfStudentsc" />
+</xs:schema>
