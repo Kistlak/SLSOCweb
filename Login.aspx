@@ -67,7 +67,7 @@
             </div>
 
             <div class="form-group has-feedback">
-                <asp:TextBox ID="txtPassword" runat="server" class="form-control" placeholder="Password"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server" class="form-control" placeholder="Password" type="password"></asp:TextBox>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
 

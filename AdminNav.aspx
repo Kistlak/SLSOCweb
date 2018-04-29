@@ -27,8 +27,8 @@ a.list-group-item
                     <div class="left-cont col-md-3"><!-- Left Container -->
                       <ul class="list-group">
                         
-                          <a href="img2.php" class="list-group-item">Student Feedback</a>
-                          <a href="ksview.php" class="list-group-item">Timetable</a>
+                          <a href="StuFeedback.aspx" class="list-group-item">Student Feedback</a>
+                          <a href="StuPanel.aspx" class="list-group-item">Timetable</a>
                             <a href="AdminReg.php" class="list-group-item">Register Users</a>
                             <a href="AdminView.php" class="list-group-item">Manage Admins</a>
                             <a href="AdminNew.php" class="list-group-item">Create Admins</a>
